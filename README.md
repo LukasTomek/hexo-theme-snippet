@@ -1,4 +1,4 @@
-### Traslate of original file by Google
+Traslate of original file [README.md](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md) by Google
 # hexo-theme-snippet
 
 Snippet is simple and not simple, maybe a long-awaited hexo theme.
