@@ -1,8 +1,9 @@
+### Traslate of original file by Google
 # hexo-theme-snippet
 
-Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
+Snippet is simple and not simple, maybe a long-awaited hexo theme.
 
-如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下:pray:
+If this topic is also your favorite dish, please move your finger [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) support:pray:
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
@@ -10,54 +11,54 @@ Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
-[主题预览 Demo](http://shenliyang.github.io) 
+[Theme Preview Demo](http://shenliyang.github.io)
 
 ![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots2000.jpg)
 
 
-## 主题特点
+## Theme Features
 
-- [x] 原生JavaScript实现
-- [x] 样式支持CSS预处理器Less，方便主题自定义
-- [x] 文章过期提醒功能
-- [x] 文章阅读进度条
-- [x] 网站公告功能
-- [x] 首页图片懒加载
-- [x] 首页文章缩略图自动检索文章内图片，支持自动随机图片
-- [x] 支持响应式
-- [x] 对IE浏览器的检测和警告
-- [x] 评论系统支持友言和Gitment
-- [x] 版权信息可配置
-- [x] 支持网站统计和文章推送
-- [x] 移动端的简洁设计
-- [x] 支持代码高亮并支持自定义高亮样式
-- [x] 支持Shell脚本一键使用Travis CI持续部署Hexo博客
-
-
-# **基础篇**
-
-> 如果你在此之前使用的是 `Hexo 2.x` 版本，为了避免未知的错误，请备份好数据，或者建立新的博客目录
-
-### 1. 环境搭建
-
-需要`Node.js` 环境、`Git` 环境以及 `Hexo` ,如果你尚未安装或者不了解 `Hexo`，请参考 [官方教程](https://hexo.io/zh-cn/docs/index.html) 进行了解以及安装。如果需要构建工具请自行安装，或使用本主题的Gulp方式。
+- [x] native JavaScript implementation
+- [x] style support CSS preprocessor Less, custom theme customization
+- [x] article expiration reminder function
+- [x] article reading progress bar
+- [x] website announcement function
+- [x] Home Image lazy loading
+- [x] Home article thumbnails Automatically retrieve pictures within the article, support automatic random images
+- [x] supports response
+- [x] detection and warning of IE
+- [x] comment system support friendly and Gitment
+- [x] copyright information can be configured
+- [x] support site statistics and article push
+- [x] Simple design of the mobile side
+- [x] supports code highlighting and supports custom highlight styles
+- [x] support shell script One key to use Travis CI to continuously deploy Hexo blog
 
 
-### 2. 下载主题
+# **Fundamentals**
 
-有两种方式获取本主题--下载 `*.zip` 文件和通过 `git`方式：
+> If you are using the `Hexo 2.x` version before, in order to avoid unknown errors, please back up your data or create a new blog directory
 
-1. 下载 [Snippet主题](https://github.com/shenliyang/hexo-theme-snippet) 文件解压后放在 `themes` 目录下，和博客中的landscape为同级目录
+### 1.  Environment to build
 
-2. Git方式，在Hexo根目录执行：
+Need to `Node.js` environment,` Git` environment and `Hexo`, if you have not installed or do not understand` Hexo`, please refer to [official tutorial](https://hexo.io/en/docs/index .html) to understand and install. If you need to build a tool, please install it yourself or use the Gulp method of this topic.
+
+
+### 2. Download the theme
+
+There are two ways to get this topic - download the `.zip` file and pass the `git` way:
+
+1. Download [Snippet Theme](https://github.com/shenliyang/hexo-theme-snippet) File decompression placed in the `themes` directory, and the blog in the landscape for the same level directory
+
+2. Git mode, in the Hexo root directory execution:
 ``` bash
     git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/snippet
-``` 
+```
 
-### 3. 安装插件
+### 3. Install the plugin
 
-因为 **hexo-theme-snippet** 使用了 `ejs` 模版引擎 、 `Less` CSS预编译语言以及在官方插件的基础上
-进行功能的开发，以下为必装插件：
+Because **hexo-theme-snippet** uses the `ejs` template engine,` Less` CSS precompiled languag0e, and on the basis of official plugins.
+To carry out the development of the function, the following is necessary plug-ins:
 
 ``` bash
     npm install hexo-renderer-ejs --save
@@ -65,142 +66,142 @@ Snippet 简洁而不简单，也许是一款你寻找已久的hexo主题。
     npm install hexo-deployer-git --save
 ```
 
-### 4. 部署主题
+### 4. Deploy the theme
 
-> 如果没有更改过主题源文件可以跳过1,2步骤
+> If you have not changed the theme source file you can skip step 1 or 2
 
 
-1. Gulp打包构建，压缩优化部署前的代码。  [Gulp入门指南](http://www.gulpjs.com.cn/docs/getting-started/)
+1. Gulp package build, compression optimization pre-deployment code.  [Gulp Getting Started Guide](http://www.gulpjs.com.cn/docs/getting-started/)
 ``` bash
-    npm install   //安装项目依赖
+    npm install   // install project dependencies
 ```
 
-2. 拷贝gulpfile.js文件到项目根目录下(非主题目录)
+2. Copy the gulpfile.js file to the project root directory (non-thematic directory)
 ``` bash
-    gulp 或者 gulp default   //执行打包任务
+    gulp or gulp default // perform the packing task
 ```
 
-3. 清空hexo静态文件和缓存，并重新生成
+3. Empty hexo static files and cache and rebuild them
 ``` bash
-    hexo clean && hexo g  //清空缓存并生成静态文件
+    hexo clean && hexo g // clear the cache and generate a static file
 ```
 
-4. 本地预览，确没有问题再进行发布
+4. Local preview, there is no problem before the release
 ``` bash
-    hexo s -p 4000 或者 hexo s  //启动本地服务默认
+     hexo s -p 4000 or hexo s // start local service default
 ```
 
-5. 当gulp执行完成，并提示  `please execute： hexo d` 时，可以进行发布
+5. When gulp is finished and prompts `please execute: hexo d`, it can be published
 ``` bash
-    hexo d 或者 gulp deploy  //部署发布
+    hexo d or gulp deploy // deployment release
 ```
 
 
-### 5. 更新主题
+### 5. Update the theme
 
-主题可能会不定时优化和更新，更新主题代码：
+Topics may be updated and updated from time to time, update the subject code:
 
 ``` bash
     cd themes/snippet
     git pull
-``` 
+```
 
-# **主题篇**
+# **Theme**
 
-### 1. 主题配置
+### 1. Theme configuration
 
 ``` yaml
 
-# layout -- 布局相关
-# language: zh-CN 默认语言
+# layout - layout related
+# language: en default language
 
-## menu -- 导航菜单显示{[@page:名字,@url:地址,@icon:图标]}
+## menu - navigation menu display {[@page: name, @ url: address, @ icon: icon]}
 menu:
-- page: home 
+- page: home
   url: /
   icon: fa-home
 
-## favicon -- 网站图标位置{@favicon}
+## favicon - site icon location {@favicon}
 favicon: /favicon.ico
 
-## rss --rss文件位置{@rss}
+## rss --rss file location {@rss}
 rss: /atom.xml
 
 
-# 各个小工具的设置
+# Set the gadgets
 
-## widgets -- 6个左边小工具{@widgets:[notification,category,archive,tagcloud,friends]}
+## widgets - 6 left widgets {@widgets: [notification, category, archive, tagcloud, friends]}
 widgets:
-- notification 
+- notification
 - social
 - category
 - archive
 - tagcloud
 - friends
 
-# 各个小工具的设置
+# Set the gadgets
 
-## notification config --网站公告设置,支持 html 和 纯文本
-notification: |- 
-            <p>主题已经上线！欢迎下载或更新~ <br/>
-            主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
-            <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request。<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a></p>
+## notification config - website announcement settings, support html and plain text
+notification: |-
+            <p>The theme is online! Welcome to download or update ~ <br/>
+            Theme download: <a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet theme</a> <br/>
+            <hr/>Acceptance of contributions, including not limited to submission of questions and requirements, repair code. Welcome to Pull Request.<br/> Support topic: <a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一about</a></p>
 
-## 社交设置{@name:社交工具名字，@icon:社交工具图标，@href:设置工具链接} [参考图标](http://fontawesome.io/icons/)
+## social settings {@name: social tool name, @ icon: social tool icon, @ href: set tool link} [reference icon] (http://fontawesome.io/icons/)
 social:
  - name: Github
    icon: git
    href: //github.com/shenliyang
-   
-## 文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
+
+## Article classification settings {@cate_config:{@show_count: Whether to display numbers, @ show_current: whether to highlight the current category}}
 cate_config:
    show_count: true
    show_current: true
 
-## 文章归档设置{@arch_config:/*参数参考：https://hexo.io/zh-cn/docs/helpers.html#list-archives*/}
+## article archive settings {@arch_config: / * parameter reference: https: //hexo.io/zh-cn/docs/helpers.html#list-archives*/}
 arch_config:
    type: 'monthly'
    show_count: true
    order: -1
 
-## 友链设置{@链接名称：链接地址{@links:[,,,]}}
+## friend chain settings {@ link name: link address {@links: [,,,]}}
 links:
     - 主题作者: http://www.shenliyang.com
 
 
-# 主题自定义个性化配置
+# Theme customization personalized configuration
 
-## 网站宣传语{@branding：网站宣传语(不设置显示本地图片)}
-branding: 从未如此简单有趣
+## website slogan {@branding: website slogan (do not set to show the local picture)}
+branding: Never so simple and funny
 
-## 懒加载图片占位符
-placeholder: ./img/loading.gif //为了友好，不建议改动
+## lazy loading image placeholders
+placeholder: ./img/loading.gif // For friendliness, no changes are recommended
 
-## 首页文章列表缩略图
-### 加载规则: 自定义文章缩略图(在Front-matter中添加的'img'字段) > 文章内的图片 > defaultImgs(随机获取) > 无图模式列表
-  
-## 自定义随机图片
+## Home article list thumbnails
+### loading rules: custom article thumbnails ('img' fields added in Front-matter>> pictures in articles> defaultImgs (random access)> no graph mode list
+
+## Customize random images
 defaultImgs:
-  - http://www.example.jpg //远程图片链接示例
-  - /img/default-1.jpg //本地图片链接示例
+  - http://www.example.jpg // Remote picture link example
+  - /img/default-1.jpg // Example of local image link
 
-## 截取文章首页描述字数
+## Intercept articles Home Description Word Count
 excerptLength: 120
 
-## 当无目录时的显示文字，默认为'无'
-noCategoryText: '无'
+## When there is no directory when the display text, the default is 'no'
+noCategoryText: 'no'
 
-## 代码高亮配置{@highlightTheme: 主题名称(默认为default)}
-主题名称：[参考网站](https://cdnjs.com/libraries/highlight.js)
-## 常用可配置名称[default,github,foundation,googlecode,monokai-sublime,monokai,monokai,xcode,vs2015,tomorrow,hybrid]
+## Code Highlight Configuration {@highlightTheme: Topic Name (default is default)}
+Topic name：[Reference site](https://cdnjs.com/libraries/highlight.js)
+## Commonly configurable name[default,github,foundation,googlecode,monokai-sublime,monokai,monokai,xcode,vs2015,tomorrow,hybrid]
 
-highlightTheme: default 
+highlightTheme: default
 
-## 文章过期提醒功能 {@warning:{days:临界天数(默认300天,设置0关闭功能),text:提醒文字/*%d为过期总天数占位符*/}}
+## Article expiration reminder function {@warning:{days:临界天数(默认300天,设置0关闭功能),text:提醒文字/*%d为过期总天数占位符*/}}
 warning:
   days: 300  
   text: '本文于%d天之前发表，文中内容可能已经过时。'
-  
+
 ## 添加版权保护{@archiveCopyright: {enable:是否开启,tip:提示信息}}
 archiveCopyright:
   enable: true
@@ -221,33 +222,33 @@ outdated_browser_text: '你使用的浏览器版本过低，为了你更好的�
 ### gitment
 gitment:
   enable: false
-  owner: 
-  repo: 
-  client_id: 
-  client_secret: 
-  labels: 
-  perPage: 
+  owner:
+  repo:
+  client_id:
+  client_secret:
+  labels:
+  perPage:
   maxCommentHeight:
-  
+
 ### 友言评论(默认选项)
 uyan:
   enable: true
-  uyan_id: 
+  uyan_id:
 
 
 ## 网站访问统计
 
-### 网盟CNZZ统计 参考网站: [网盟CNZZ](http://www.umeng.com/) 
-cnzz_anaylytics: 
+### 网盟CNZZ统计 参考网站: [网盟CNZZ](http://www.umeng.com/)
+cnzz_anaylytics:
 
 ### 百度统计 参考网站: [百度统计](https://tongji.baidu.com/)
-baidu_anaylytics: 
+baidu_anaylytics:
 
 ### 百度文章推送  参考网站: [百度站长](http://zhanzhang.baidu.com)  
 baidu_push:
 
 ### 谷歌统计
-google_anaylytics: 
+google_anaylytics:
 
 
 ## ICON配置 (不配则启用本地Font Icon)
@@ -263,7 +264,7 @@ version: 1.1.0
 ### 使用技巧
 1. 修改新增文章Front-matter模板,修改`scaffolds`目录下的`post.md`模板
 ``` yml
---- 
+---
 title: {{ title }} // 标题
 date: {{ date }}   // 时间
 categories:        // 分类
@@ -294,7 +295,7 @@ node_js: stable #安装稳定版Node
 sudo: false  
 
 #cache 启用缓存，加快构建速度
-cache: 
+cache:
   directories:
     - "node_modules"
 
@@ -338,7 +339,7 @@ env:
 ## 3. 主题开发
 Gulp 执行启用主题二次开发模式
 ``` bash
-    gulp dev 
+    gulp dev
 ```
 会监听样式less或者JS文件的变动。然后执行上面的【主题发布】即可。
 
@@ -354,7 +355,7 @@ Gulp 执行启用主题二次开发模式
 
 ## 感谢
 
-在设计这款主题的时候参考了好多主题和博客的设计和创意，深表感谢！ 
+在设计这款主题的时候参考了好多主题和博客的设计和创意，深表感谢！
 
 ## 贡献
 接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
