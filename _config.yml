@@ -5,19 +5,19 @@
 menu:
 - page: home
   url: /
-  icon: 
-- page: 前端
-  url: /categories/前端/
-  icon: 
-- page: 后端
-  url: /categories/后端/
-  icon: 
-- page: 工具
-  url: /categories/工具/
-  icon: 
-- page: 资源
-  url: /categories/资源/
-  icon: 
+  icon: fa-home
+# - page: 前端
+#   url: /categories/前端/
+#   icon:
+# - page: 后端
+#   url: /categories/后端/
+#   icon:
+# - page: 工具
+#   url: /categories/工具/
+#   icon:
+# - page: 资源
+#   url: /categories/资源/
+#   icon:
 
 ## favicon 
 favicon: /favicon.ico
@@ -25,17 +25,19 @@ favicon: /favicon.ico
 ## Feed 
 rss: /atom.xml
 
-
-# 各个小工具的设置
+## 通用时间格式化
+date_format: YYYY-MM-DD HH:mm:ss
 
 ## widgets
 widgets:
-- notification
-- social
+# - notification
+# - social
 - category
 - archive
 - tagcloud
-- friends
+# - friends
+
+# 各个小工具的设置
 
 ## 网站公告设置
 notification: |-
@@ -76,11 +78,21 @@ arch_config:
    show_count: true
    order: -1
 
+## 彩色标签云设置
+tagcloud_config:
+   min_font: 1
+   max_font: 1
+   unit: em
+   amount: 100
+   color: true
+   orderby: 'count'
+
 ## 友链设置
 links:
   - 个人博客: http://www.shenliyang.com
 
 
+# 自定义内容设置
 
 # 主题自定义个性化配置
 

@@ -24,7 +24,7 @@
         <%- page.content %>
     </div>
 
-    <div class="post-footer">   
+    <!-- <div class="post-footer">
         <div>
             <% if(theme.archiveCopyright){ %>
                 转载声明: <%- theme.archiveCopyright.tip %>
@@ -34,24 +34,21 @@
             <% if(theme.cc){ %>
                 <%= __('post_licence') %>: <%- theme.cc %>
             <% } %>
-        </div>  
+        </div>
     </div>
-</article>
+</article> -->
 
 <div class="article-nav prev-next-wrap clearfix">
     <% if(page.prev){ %>
-        <a href="<%- url_for(page.prev.path) %>" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+        <a href="<%- url_for(page.prev.path) %>" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>Previous</a>
     <% } %>
     <% if(page.next){ %>
-        <a href="<%- url_for(page.next.path) %>" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+        <a href="<%- url_for(page.next.path) %>" class="next-post btn btn-default">Next<i class="fa fa-angle-right fa-fw"></i></a>
     <% } %>
 </div>
 
-<% if(page.comments){ %>
+<!-- <% if(page.comments){ %>
     <div id="comments">
         <%- partial('_partial/comments', {page: page}) %>
     </div>
-<% } %>
-
-
-
+<% } %> -->
