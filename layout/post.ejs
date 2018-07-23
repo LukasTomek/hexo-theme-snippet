@@ -3,9 +3,9 @@
     <div class="post-head">
         <h1 id="<%= page.title %>">
             <%if(page.link){%>
-            <a href="<%- url_for(page.link) %>" target="_blank"><%= page.title %></a>
-            <%}else{%>
-            <%= page.title||'NO Title!' %>
+	            <a href="<%- url_for(page.link) %>" target="_blank"><%= page.title %></a>
+	            <%}else{%>
+	            <%= page.title||'NO Title!' %>
             <%}%>
         </h1>
         <%- partial('_partial/article-meta', {post: page}) %>
@@ -17,17 +17,17 @@
             <p class="fa fa-exclamation-triangle warning">
                 <%- warningTextArr[0]%><strong><%= diffDays %></strong><%- warningTextArr[1]%>
             </p>
-            <% } %>
+        <% } %>
     </div>
     <%- partial('_partial/gallery',{post:page})%>
-    <div class="post-body">
+    <div class="post-body post-content">
         <%- page.content %>
     </div>
 
-    <!-- <div class="post-footer">
+    <div class="post-footer">
         <div>
-            <% if(theme.archiveCopyright){ %>
-                转载声明: <%- theme.archiveCopyright.tip %>
+            <% if(theme.declaration.enable){ %>
+                <%- theme.declaration.title %>：<%- theme.declaration.tip %><%- theme.cc %>
             <% } %>
         </div>
         <div>
@@ -36,19 +36,25 @@
             <% } %>
         </div>
     </div>
-</article> -->
+</article>
 
 <div class="article-nav prev-next-wrap clearfix">
     <% if(page.prev){ %>
-        <a href="<%- url_for(page.prev.path) %>" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>Previous</a>
+        <a href="<%- url_for(page.prev.path) %>" class="pre-post btn btn-default" title='<%- page.prev.title %>'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">Previous</span>
+            <span class="hidden-xs"><%- page.prev.title %></span>
+        </a>
     <% } %>
     <% if(page.next){ %>
-        <a href="<%- url_for(page.next.path) %>" class="next-post btn btn-default">Next<i class="fa fa-angle-right fa-fw"></i></a>
+        <a href="<%- url_for(page.next.path) %>" class="next-post btn btn-default" title='<%- page.next.title %>'>
+            <span class="hidden-lg">Next</span>
+            <span class="hidden-xs"><%- page.next.title %></span><i class="fa fa-angle-right fa-fw"></i>
+        /a>
     <% } %>
 </div>
 
 <!-- <% if(page.comments){ %>
     <div id="comments">
-        <%- partial('_partial/comments', {page: page}) %>
+        <%- partial('_vendor/comments/index', {page: page}) %>
     </div>
 <% } %> -->

@@ -7,13 +7,13 @@ If this topic is also your favorite dish, please move your finger [Star](https:/
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
-[![mnt-image](https://img.shields.io/maintenance/yes/2017.svg)](../../commits/master)
+[![mnt-image](https://img.shields.io/maintenance/yes/2018.svg)](../../commits/master)
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
 [Theme Preview Demo](http://shenliyang.github.io)
 
-![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots2000.jpg)
+![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg)
 
 
 ## Theme Features
@@ -41,7 +41,7 @@ If this topic is also your favorite dish, please move your finger [Star](https:/
 
 ### 1.  Environment to build
 
-Need to `Node.js` environment,` Git` environment and `Hexo`, if you have not installed or do not understand` Hexo`, please refer to [official tutorial](https://hexo.io/en/docs/index .html) to understand and install. If you need to build a tool, please install it yourself or use the Gulp method of this topic.
+Need to `Node.js` environment,` Git` environment and `Hexo`, if you have not installed or do not understand` Hexo`, please refer to [official tutorial](https://hexo.io/en/docs/index.html) to understand and install. If you need to build a tool, please install it yourself or use the Gulp method of this topic.
 
 
 ### 2. Download the theme
@@ -132,6 +132,7 @@ rss: /atom.xml
 
 ## widgets - 6 left widgets {@widgets: [notification, category, archive, tagcloud, friends]}
 widgets:
+- search
 - notification
 - social
 - category
@@ -140,6 +141,18 @@ widgets:
 - friends
 
 # Set the gadgets
+
+## Hledání
+jsonContent:
+  searchLocal: true // Enable local search
+  searchGoogle: true // Enable Google search
+  posts:
+    title: true
+    text: true
+    content: true
+    categories: false
+    tags: false
+
 
 ## notification config - website announcement settings, support html and plain text
 notification: |-
@@ -199,22 +212,15 @@ highlightTheme: default
 
 ## Article expiration reminder function {@warning:{days:临界天数(默认300天,设置0关闭功能),text:提醒文字/*%d为过期总天数占位符*/}}
 warning:
-  days: 300  
+  days: 300
   text: '本文于%d天之前发表，文中内容可能已经过时。'
 
-## 添加版权保护{@archiveCopyright: {enable:是否开启,tip:提示信息}}
-archiveCopyright:
+## 文章内声明{@declaration: {enable:是否开启,title:声明标题,tip:提示内容}}
+declaration:
   enable: true
-  tip: '商业转载请联系作者获得授权,非商业转载请注明出处 © Snippet'
-
-## 版权声明文字，支持html/text，但不要使用<li>标签
-cc: |-
-      <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
-      知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
-      </a>
-
-## 过低版本的浏览器提醒文字
-outdated_browser_text: '你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。'
+  title: '转载声明'
+  tip: |-
+      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
 
 
 ## 主题评论
@@ -230,10 +236,39 @@ gitment:
   perPage:
   maxCommentHeight:
 
-### 友言评论(默认选项)
-uyan:
+### 来必力(默认选项)
+livere:
   enable: true
+  livere_uid:
+
+### 友言评论(服务不稳定，经常无法加载)
+uyan:
+  enable: false
   uyan_id:
+
+### Disqus评论(需要翻墙，或者搭建代理)
+disqus:
+  enable: false
+  shortname: snippet
+  count: false
+
+### 畅言评论(需要ICP备案)
+changyan:
+  enable: false
+  appid:
+  conf:
+
+### Valine评论 参考网站: [valine评论](https://valine.js.org/)
+  valine:
+   enable: true
+   appId:
+   appKey:
+   placeholder: 说点什么吧
+   notify: false // 邮件通知
+   verify: false // 验证码
+   avatar: mm // avatar头像
+   meta: nick,mail // 输入框内容，可选值nick,mail,link
+   pageSize: 10
 
 
 ## 网站访问统计
@@ -244,24 +279,25 @@ cnzz_anaylytics:
 ### 百度统计 参考网站: [百度统计](https://tongji.baidu.com/)
 baidu_anaylytics:
 
-### 百度文章推送  参考网站: [百度站长](http://zhanzhang.baidu.com)  
+### 百度文章推送  参考网站: [百度站长](http://zhanzhang.baidu.com/)
 baidu_push:
 
-### 谷歌统计
+### 谷歌统计 参考网站：[谷歌统计](https://www.google-analytics.com/)
 google_anaylytics:
 
+### 腾讯分析 参考网站：[腾讯分析](http://ta.qq.com/)
+tencent_analytics:
 
 ## ICON配置 (不配则启用本地Font Icon)
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 ## 网站主题配置
-since: 2017
-robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
-version: 1.1.0
-
+since: 2017  //建站时间
+robot: 'all'  //控制搜索引擎的抓取和索引编制行为，默认为all
+version: 1.2.1  //当前主题版本号
 ```
 
-### 使用技巧
+### 主题使用技巧及功能扩展
 1. 修改新增文章Front-matter模板,修改`scaffolds`目录下的`post.md`模板
 ``` yml
 ---
@@ -274,6 +310,13 @@ img:               // 自定义缩略图
 ---
 ```
 
+2. 启用站内本地搜索功能
+
+如果要使用本地站点搜索，必须安装插件hexo-generator-json-content来创建本地搜索json文件
+```bash
+    npm i hexo-generator-json-content@2.2.0 -S
+```
+然后修改主题配置_config.yml文件下`jsonContent`相关参数。
 
 # **提升篇**
 
@@ -292,7 +335,7 @@ CI即持续集成系统。对个人而言，就是让你的代码在提交到远
 language: node_js #使用Node语言环境
 node_js: stable #安装稳定版Node
 
-sudo: false  
+sudo: false
 
 #cache 启用缓存，加快构建速度
 cache:
@@ -312,14 +355,14 @@ install:
 
 before_script:
   - export TZ='Asia/Shanghai' #设置时区
-  - npm install -g gulp  #安装Gulp
+  - npm install -g gulp  #全局安装Gulp
   - chmod +x _travis.sh  #授权脚本执行权限
 
 script:
   - hexo clean && hexo g #清除缓存并生成静态文件
   - gulp #执行gulp任务
 
-after_success: #实行成功时(以后扩展功能使用)
+after_success: #执行成功时(以后扩展功能使用)
 
 after_script:
   - ./_travis.sh #执行部署脚本
@@ -361,28 +404,64 @@ Gulp 执行启用主题二次开发模式
 接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
 欢迎大家提Issue或者Pull Request。
 
-如果觉得本主题还不错，==欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下==，您的支持和鼓励才是后续更新最大的动力
+如果觉得本主题还不错，== 欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下 ==，您的支持和鼓励才是后续更新最大的动力
 
-## 版本更新
+## 宗旨
+主题宗旨：**致力主题简洁轻量，配置方便开箱即用**
 
-### v1.0.0
-- 提交至官方hexo-theme-snippet仓库，Snippet主题正式上线
-- 增加Travis CI 持续集成自动部署
+> Hexo框架追求的是快速、简洁，高效。喜欢绚丽，添加各种功能，折腾的朋友，建议移步至：[wordpress官网](https://cn.wordpress.org/) | [dayup主题](http://www.shenliyang.com/dayup)
 
-### v1.1.0
-- 重构样式并优化Less文件，方便二次开发和自定义主题样式。
-- 新增 右侧社交边栏 小工具。
+## 常见问题
+
+#### 1. 搜索功能不能用，content.json文件找不到？
+
+需要安装hexo-generator-json-content插件：
+
+``` bash
+npm i hexo-generator-json-content@2.2.0 -S
+```
+
+#### 2. 谷歌搜索没有响应？
+
+如果使用谷歌搜索没有响应，确定是否已经科学上网
+
+#### 3. 怎么设置首页文章缩略图自动检索文章内图片？
+
+首页文章缩略图加载规则: 自定义文章缩略图 > 自动检索文章内的图片 > defaultImgs(随机获取) > 无图模式列表
+
+在`Front-matter`中：
+指定img变量 -> 为固定缩略图
+不指定img变量 -> 自动检索文章内的图片
 
 
-## 最近更新日志
-- 增加谷歌统计
-- 增加自定义网站宣传语
-- 文章过期提醒增加关闭功能
-- 修复云标签链接 undefinedtag Bug
-- 优化主题代码和主题配置
-- 重构中文README.md文档
+#### 4. 在url哪里可以访问到本地静态文件吗？
 
+在主题 `source` 目录下新建文件夹，例如:  `static`文件夹，然后添加静态资源，例如: xxx.pdf文件， 访问：*`http://yoursite.com/static/xxx.pdf`*
+
+#### 5. 这个主题有分页功能吗？
+
+主题已经集成分页功能，在Hexo根目录下修改 _config.yml 的配置
+
+| 参数       | 描述        | 默认值  |
+| ------------- |:-------------:| :-----:|
+| per_page     | 每页显示的文章量 (0 = 关闭分页功能) |  10 |
+| pagination_dir     | 分页目录      |   page |
+
+#### 6. 为什么右侧小工具标题都为英文呢？
+
+可能是您忘记预设网站语言，而启用默认语言了，请先在 _config.yml (注意：为hexo的_config.yml配置文件，与themes在同级目录下，不是主题的配置文件!!!) 中调整 language 设定
+
+``` bash
+language: zh-CN
+```
+
+> 没有找到我需要的问题： [提Issues](https://github.com/shenliyang/hexo-theme-snippet/issues/new)
+
+
+## 版本更新日志
+
+- 增加Valine评论
 
 ## License
 
-[MIT](/LICENSE)
+[MIT License](/LICENSE)
