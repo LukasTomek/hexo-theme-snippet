@@ -1,17 +1,17 @@
 <h3> 
-<% if(page.tag) { %>
-    <%= page.tag %> 
-<% } if(page.category) { %>
-    <%= page.category %> 
-<% } else { %>
-<% } %>
+    <% if(page.tag) { %>
+        <%= page.tag %> 
+    <% } if(page.category) { %>
+        <%= page.category %> 
+    <% } else { %>
+    <% } %>
 </h3>
 <% page.posts.each(function(post){ %>
     <article class="post">
         <% if(post.img) { %>
             <div class="post-media">
-                <a href="javascript:">
-                    <img class="img-ajax" src="<%= theme.placeholder %>"  data-src="<%- post.img %>"  alt="<%- post.title %>"> 
+                <a href="<%- url_for(post.path) %>">
+                    <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- post.img %>"  alt="<%- post.title %>"> 
                 </a>
             </div>
         <% } %>
@@ -22,12 +22,16 @@
                 </h1>
                 <div class="post-meta">  &bull;
                     <time class="post-date" datetime="" title="">
-                        <%- date(post.date,"YYYY年MM月DD日") %>
+                        <%- date(post.date,"YYYY/MM/DD") %>
                     </time>
                 </div>
             </div>
             <p class="brief">
-                <%- truncate(strip_html(post.content), {length: theme.excerptLength || 120, omission: '...'}) %>
+                <% if(post.excerpt) { %>
+                    <%= strip_html(post.excerpt) + '…' %>
+                <% } else { %>
+                    <%= truncate(strip_html(post.content), {length: theme.excerptLength || 120, separator: ''}) %>
+                <% } %>
             </p> 
         </div>
     </article>

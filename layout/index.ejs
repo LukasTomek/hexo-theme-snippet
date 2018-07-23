@@ -1,10 +1,13 @@
-<!-- <div class="carousel">
-    <%- image_tag('img/head-img.jpg') %>
-</div> -->
+<% if (theme.carousel.img){ %>
+    <div class="carousel">
+        <%- image_tag(theme.carousel.img) %>
+    </div>
+<% } %>
+
 <% if(page.posts && page.posts.length){ %>
 <% page.posts.forEach(function (post, i) { %>
 <%
-    var urls = pickImgs(post);
+    var urls = lazyImage(post);
     var random = Math.floor(Math.random() * (urls.length));
     if(theme.defaultImgs && theme.defaultImgs.length >0){
         var urls2 = theme.defaultImgs;
@@ -15,8 +18,8 @@
 <article class="post">
     <% if(_photoUrl) {%>
         <div class="post-media">
-            <a href="javascript:">
-                <img class="img-ajax" src="<%= theme.placeholder %>"  data-src="<%- url_for(_photoUrl) %>"   alt="<%- post.title %>">
+            <a href="<%- url_for(post.path) %>">
+                <img class="img-ajax" src="<%- url_for('/img/loading.gif') %>"  data-src="<%- url_for(_photoUrl) %>"   alt="<%- post.title %>">
             </a>
         </div>
     <% } %>
@@ -32,18 +35,24 @@
             </div>
         </div>
         <p class="brief">
-            <%- truncate(strip_html(post.content), {length: theme.excerptLength || 120, omission: '...'}) %>
+            <% if(post.excerpt) { %>
+                <%= strip_html(post.excerpt) + '…' %>
+            <% } else { %>
+                <%= truncate(strip_html(post.content), {length: theme.excerptLength || 120, separator: ''}) %>
+            <% } %>
         </p>
     </div>
-    <footer class="post-footer clearfix">
-        <div class="pull-left tag-list">
-            <%- partial('_partial/article-meta', {post: post}) %>
-        </div>
+    <% if(theme.homePanel) { %>
+        <footer class="post-footer clearfix">
+            <div class="pull-left tag-list">
+                <%- partial('_partial/article-meta', {post: post}) %>
+            </div>
 
-        <div class="post-permalink">
-            <a href="<%- url_for(post.path) %>" class="btn btn-default">Continue Reading</a>
-        </div>
-    </footer>
+            <div class="post-permalink">
+                <a href="<%- url_for(post.path) %>" class="btn btn-default"><%= __('read_more') %></a>
+            </div>
+        </footer>
+    <% } %>
 </article>
 <% }) %>
 <%}%>
