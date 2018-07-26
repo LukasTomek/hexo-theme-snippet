@@ -7,19 +7,19 @@
 menu:
 - page: home
   url: /
-  icon: fa-home
-# - page: 前端
-#   url: /categories/前端/
-#   icon:
-# - page: 后端
-#   url: /categories/后端/
-#   icon:
-# - page: 工具
-#   url: /categories/工具/
-#   icon:
-# - page: 资源
-#   url: /categories/资源/
-#   icon:
+  icon:
+- page: 前端
+  url: /categories/前端/
+  icon:
+- page: 后端
+  url: /categories/后端/
+  icon:
+- page: 工具
+  url: /categories/工具/
+  icon:
+- page: 时间轴
+  url: /archives/
+  icon:
 
 ## favicon
 favicon: /favicon.ico
@@ -36,14 +36,23 @@ carousel:
 ## widgets
 widgets:
   - search
-# - notification
-# - social
-- category
-- archive
-- tagcloud
-# - friends
+  - notification
+  - social
+  - category
+  - archive
+  - tagcloud
+  - friends
 
-# 各个小工具的设置
+## 搜索
+jsonContent:
+  searchLocal: true
+  searchGoogle: false
+  posts:
+    title: true
+    text: true
+    content: true
+    categories: false
+    tags: false
 
 ## 网站公告设置
 notification: |-
@@ -85,29 +94,22 @@ arch_config:
    show_count: true
    order: -1
 
-## 彩色标签云设置
-tagcloud_config:
-   min_font: 1
-   max_font: 1
-   unit: em
-   amount: 100
-   color: true
-   orderby: 'count'
-
 ## 友链设置
 links:
   - 个人博客: http://www.shenliyang.com
 
-
-# 自定义内容设置
 
 # 主题自定义个性化配置
 
 ## 网站宣传语
 branding:
 
-## 懒加载图片占位符
-placeholder: ./img/loading.gif
+## 设置banner背景图片
+banner:
+    img: http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg
+
+## 首页列表底部面板
+homePanel: true
 
 ## 缩略图自定义随机图片
 defaultImgs:
