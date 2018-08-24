@@ -6,8 +6,10 @@ Snippet is simple and not simple, maybe a long-awaited hexo theme.
 If this topic is also your favorite dish, please move your finger [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) support:pray:
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
+[![Read the Docs](https://img.shields.io/readthedocs/pip/stable.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
 [![mnt-image](https://img.shields.io/maintenance/yes/2018.svg)](../../commits/master)
+[![ImgBot](https://img.shields.io/badge/ImgBot-build-brightgreen.svg)]()
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
@@ -15,6 +17,7 @@ If this topic is also your favorite dish, please move your finger [Star](https:/
 
 ![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg)
 
+![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg "Snippet主题")
 
 ## Theme Features
 
@@ -61,9 +64,7 @@ Because **hexo-theme-snippet** uses the `ejs` template engine,` Less` CSS precom
 To carry out the development of the function, the following is necessary plug-ins:
 
 ``` bash
-    npm install hexo-renderer-ejs --save
-    npm install hexo-renderer-less --save
-    npm install hexo-deployer-git --save
+npm i hexo-renderer-ejs hexo-renderer-less hexo-deployer-git -S
 ```
 
 ### 4. Deploy the theme
