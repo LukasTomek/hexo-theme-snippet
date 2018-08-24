@@ -15,9 +15,7 @@ If this topic is also your favorite dish, please move your finger [Star](https:/
 
 [Theme Preview Demo](http://shenliyang.github.io)
 
-![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg)
-
-![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg "Snippet主题")
+![hexo-theme-snippet](http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/snippet-screenshots1000.jpg "Snippet theme")
 
 ## Theme Features
 
@@ -55,7 +53,7 @@ There are two ways to get this topic - download the `.zip` file and pass the `gi
 
 2. Git mode, in the Hexo root directory execution:
 ``` bash
-    git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/snippet
+    git clone https://github.com/shenliyang/hexo-theme-snippet.git themes/snippet
 ```
 
 ### 3. Install the plugin
