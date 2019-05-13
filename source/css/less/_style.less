@@ -360,6 +360,13 @@ pre {
     padding:10px 0;
     margin-bottom: 10px;
 }
+.main-content {
+    .breadcrumb {
+        padding-left: 20px;
+        font-size: 16px;
+        line-height: 2em;
+    }
+}
 .post {
     padding: 20px;
     background:  @white_color;
@@ -891,11 +898,12 @@ pre {
             font-size:1em!important;
             line-height: 1.5em;
             display: inline-block;
-            margin: 0 7px 7px 0;
+            margin: 0 5px 5px 0;
             .transition;
+            .text-ellipsis();
             &:hover {
                 color: @white_color;
-                background: @theme_color;
+                background-color: @theme_color;
                 .border(@theme_color);
                 text-decoration: none;
             }
@@ -923,6 +931,7 @@ pre {
             font-size: 20px;
         }
     }
+
     .friends-link {
         a {
             margin-right:15px
@@ -1035,6 +1044,45 @@ pre {
             }
         }
     }
+====================================================*/
+#article-toc {
+    padding-top: 1em;
+    background-color: @white_color;
+    top: 0;
+    bottom: 70px;
+    overflow-y: auto;
+    ol {
+        list-style:none;
+    }
+    .toc{
+         padding-left:2em;
+        .toc-item {
+            .toc-link{
+                display: block;
+                color: @black3_color;
+                text-decoration: none;
+                padding: 4px 0;
+                line-height: 1.25em;
+                position: relative;
+                width: 100%;
+                .text-ellipsis();
+                &:hover{
+                    color:@theme_color;
+                    .transition(.15s);
+                }
+            }
+            &.toc-level-2{
+                &>.toc-link{
+                    font-size:15px;
+                }
+            }
+=======
+
+    .notification {
+        img {
+            max-width: 100%;
+        }
+    }
 }
 
 /*====================================================
@@ -1120,6 +1168,12 @@ pre {
 #toc-btn{
     bottom:65px;
 }
+
+/*====================================================
+    post reward
+====================================================*/
+
+@import "_reward";
 
 /*====================================================
     timeline

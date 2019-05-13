@@ -1,15 +1,14 @@
 <!--
-    1.我已阅读 [Snippet主题README.md文档] 及常见问题。
-    2.已搜索过相关[Issues]并无解决方案。
+     1. I have read [Snippet Theme README.md Document] and FAQ.
+     2. I have searched for related [Issues] and there is no solution.
 -->
 
-### 该问题是怎么引起的？
+### How is the problem caused?
 
 
 
-### 重现步骤
+### Reproduce the steps
 
 
 
-### 报错信息
-
+### Error message

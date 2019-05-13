@@ -29,7 +29,8 @@ rss: /atom.xml
 
 ## Carousel
 carousel:
-  img: ##img/head-img.jpg
+  img: ##'./img/head-img.jpg'
+  url: 'javascript:'
 
 # 各个小工具的设置
 
@@ -91,13 +92,25 @@ cate_config:
 ## 文章归档设置
 arch_config:
    type: 'monthly'
+   format: 'YYYY年MM月'
    show_count: true
    order: -1
 
+## 标签云设置
+tagcloud:
+  tag3d: false
+  textColour: '#444'
+  outlineMethod: 'block'
+  outlineColour: '#FFDAB9'
+  interval: 30
+  freezeActive: true
+  frontSelect: true
+  reverse: true
+  wheelZoom: false
+
 ## 友链设置
 links:
-  - 个人博客: http://www.shenliyang.com
-
+  - Hexo官网: https://hexo.io/zh-cn/
 
 # 主题自定义个性化配置
 
@@ -106,7 +119,7 @@ branding:
 
 ## 设置banner背景图片
 banner:
-    img: http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg
+    img: http://snippet.shenliyang.com/img/banner.jpg
 
 ## 首页列表底部面板
 homePanel: true
@@ -137,15 +150,60 @@ warning:
 
 ## 文章内声明
 declaration:
-  enable: false
+  enable: true
   title: '转载声明'
   tip: |-
       商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
 
+## 文章打赏
+reward:
+  alipay: ''
+  wepay: ''
+  tip: 赞赏是不耍流氓的鼓励
 
 ## 主题评论
 
-### gitment
+## Valine评论
+valine:
+   enable: true
+   appId: xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz
+   appKey: erIpQac4azoCmgfBB7Dl9maa
+   placeholder: 说点什么吧
+   notify: false
+   verify: false
+   avatar: mm
+   meta: nick,mail
+   pageSize: 10
+
+### 畅言评论(需要ICP备案)
+changyan:
+  enable: false
+  appid:
+  conf:
+
+### 来必力
+livere:
+  enable: false
+  livere_uid: MTAyMC8zMzA1MS85NjEz
+
+## Gitalk评论
+gitalk:
+   enable: false
+   clientID:
+   clientSecret:
+   repo:
+   owner:
+   admin:
+   perPage:
+   id:
+
+### Disqus评论
+disqus:
+  enable: false
+  shortname: snippet
+  count: false
+
+### gitment评论(长期不更新，不建议使用)
 gitment:
   enable: false
   owner:
@@ -153,11 +211,6 @@ gitment:
   client_id:
   client_secret:
   perPage: 10
-
-### 来必力
-livere:
-  enable: false
-  livere_uid: MTAyMC8zMzA1MS85NjEz
 
 ### 友言评论(服务不稳定)
 uyan:
@@ -188,7 +241,12 @@ valine:
    meta: nick,mail
    pageSize: 10
 
-## 网站访问统计
+## 网站访客统计
+visit_counter:
+   site: false
+   page: false
+
+## 网站访问统计分析
 
 ### 网盟CNZZ统计
 cnzz_analytics:

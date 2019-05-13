@@ -9,6 +9,14 @@ cache:
     - "node_modules"
 
 notifications:
+  # Nail robot message push deployment result
+  webhooks:
+    urls:
+      - https://oapi.dingtalk.com/robot/send?access_token=${DINGDING_ACCESS_TOKEN}
+    on_success: change
+    on_failure: always
+
+  # Mail delivery deployment result notification
   email:
     recipients:
       - snippet@91h5.cc
@@ -46,4 +54,3 @@ env:
  global:
    - GH_REF: github.com/shenliyang/shenliyang.github.io.git
    - GITEE_REF: gitee.com/shenliyang/shenliyang.git
-
