@@ -8,6 +8,7 @@ menu:
 - page: home
   url: /
   icon:
+
 # - page: 前端
 #   url: /categories/前端/
 #   icon:
@@ -30,7 +31,7 @@ rss: /atom.xml
 ## Carousel
 carousel:
   img: ##'./img/head-img.jpg'
-  url: 'javascript:'
+  url: ## 'https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=xs0pypd2'
 
 # 各个小工具的设置
 
@@ -43,6 +44,7 @@ widgets:
   - archive
   - tagcloud
 ##  - friends
+  - stick
 
 ## 搜索
 jsonContent:
@@ -170,7 +172,7 @@ valine:
    appKey: erIpQac4azoCmgfBB7Dl9maa
    placeholder: 说点什么吧
    notify: false
-   verify: false
+   verify: true
    avatar: mm
    meta: nick,mail
    pageSize: 10
@@ -217,11 +219,6 @@ uyan:
   enable: false
   uyan_id: 1966422
 
-### Disqus评论
-disqus:
-  enable: false
-  shortname: snippet
-  count: false
 
 ### 畅言评论(需要ICP备案)
 changyan:
@@ -229,17 +226,6 @@ changyan:
   appid:
   conf:
 
-## Valine评论
-valine:
-   enable: false
-   appId: xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz
-   appKey: erIpQac4azoCmgfBB7Dl9maa
-   placeholder: 说点什么吧
-   notify: false
-   verify: false
-   avatar: mm
-   meta: nick,mail
-   pageSize: 10
 
 ## 网站访客统计
 visit_counter:
@@ -269,4 +255,4 @@ baidu_push: false
 #网站主题配置
 since: 2017
 robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
-version: 1.2.1
+version: 1.2.3
