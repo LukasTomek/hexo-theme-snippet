@@ -219,14 +219,6 @@ uyan:
   enable: false
   uyan_id: 1966422
 
-
-### 畅言评论(需要ICP备案)
-changyan:
-  enable: false
-  appid:
-  conf:
-
-
 ## 网站访客统计
 visit_counter:
    site: false
