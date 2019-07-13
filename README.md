@@ -1,9 +1,8 @@
-Traslate of original file [README.md](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md) by Google
 # hexo-theme-snippet
+[English Version](https://github.com/LukasTomek/hexo-theme-snippet/blob/master/README_EN.md)
+Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
-Snippet is simple and not simple, maybe a long-awaited hexo theme.
-
-If this topic is also your favorite dish, please move your finger [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) support:pray:
+如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
 [![Read the Docs](https://img.shields.io/readthedocs/pip/stable.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
@@ -15,131 +14,132 @@ If this topic is also your favorite dish, please move your finger [Star](https:/
 [![hexo version](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg)](http://hexo.io)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/LICENSE)
 
-[Theme Preview Demo](http://shenliyang.github.io?rf=gh-demo)
 
-![hexo-theme-snippet](http://snippet.shenliyang.com/img/snippet-screenshots1000.jpg "Snippet theme")
+[主题Demo戳这里](http://shenliyang.github.io?rf=gh-demo)
 
-## Theme Features
-
-- [x] native JavaScript implementation, go to jQuery
-- [x] style supports CSS preprocessor Less for easy theme customization
-- [x] Article expiration reminder function
-- [x] article reading progress bar
-- [x] Website announcement function
-- [x] Home image lazy loading
-- [x] Home article thumbnails automatically retrieve images within articles, support automatic random images
-- [x] theme support responsive
-- [x] support for 3D cloud tags
-- [x] Support article push and article rewards
-- [x] Local search and Google search in the station
-- [x] Support for multiple third-party commenting systems
-- [x] Support website statistics and non-garlic visitor statistics
-- [x] Simple design of the mobile side
-- [x] Support for code highlighting and support for custom highlight styles
-- [x] Support for Shell scripts to automate the deployment of Hexo blogs via Travis CI
-- [x] Support Hexo automated deployment results send mail and push to nails in real time
+![hexo-theme-snippet](http://snippet.shenliyang.com/img/snippet-screenshots1000.jpg "Snippet主题")
 
 
-# **Fundamentals**
+## 主题特点
 
-> If you are using the `Hexo 2.x` version before, in order to avoid unknown errors, please back up your data or create a new blog directory
+- [x] 原生JavaScript实现，去jQuery化
+- [x] 样式支持CSS预处理器Less，方便主题自定义
+- [x] 文章过期提醒功能
+- [x] 文章阅读进度条
+- [x] 网站公告功能
+- [x] 首页图片懒加载
+- [x] 首页文章缩略图自动检索文章内图片，支持自动随机图片
+- [x] 主题支持响应式
+- [x] 支持3D云标签
+- [x] 支持文章推送和文章打赏
+- [x] 站内本地搜索和谷歌搜索
+- [x] 支持多个第三方评论系统
+- [x] 支持网站统计和不蒜子访客统计
+- [x] 移动端的简洁设计
+- [x] 支持代码高亮并支持自定义高亮样式
+- [x] 支持Shell脚本通过Travis CI自动化部署Hexo博客
+- [x] 支持Hexo自动化部署结果发送邮件和实时推送到钉钉
 
-### 1.  Environment to build
 
-Need to `Node.js` environment,` Git` environment and `Hexo`, if you have not installed or do not understand` Hexo`, please refer to [official tutorial](https://hexo.io/en/docs/index.html) to understand and install. If you need to build a tool, please install it yourself or use the Gulp method of this topic.
 
-> "Subject directory" => `themes\hexo-theme-snippet`, "Hexo root directory" => project home directory;
-"Theme configuration" => `themes\hexo-theme-snippet\_config.yml`, "Hexo configuration" => `_config.yml` under the project home directory
+# **基础篇**
 
-### 2. Download the theme
+> 如果你在此之前使用的是 `Hexo 2.x` 版本，为了避免未知的错误，请备份好数据，或者建立新的博客目录
 
-There are two ways to get this topic - download the `.zip` file and pass the `git` way:
+>"主题目录" => `themes\hexo-theme-snippet`, "Hexo根目录" => 项目主目录;
+"主题配置" => `themes\hexo-theme-snippet\_config.yml`, "Hexo配置" => 项目主目录下`_config.yml`
 
-1. Download [Snippet Theme](https://github.com/shenliyang/hexo-theme-snippet) File decompression placed in the `themes` directory, and the blog in the landscape for the same level directory
+### 1. 环境搭建
 
-2. Git mode, in the Hexo root directory execution:
+需要`Node.js` 环境、`Git` 环境以及 `Hexo` ,如果你尚未安装或者不了解 `Hexo`，请参考 [官方教程](https://hexo.io/zh-cn/docs/index.html) 进行了解以及安装。如果需要构建工具请自行安装，或使用本主题的Gulp方式。
+
+
+### 2. 下载主题
+
+有两种方式获取本主题--下载 `*.zip` 文件和通过 `git`方式：
+
+1. 下载 [Snippet主题](https://github.com/shenliyang/hexo-theme-snippet) 文件解压后放在 `themes` 目录下，和博客中的landscape为同级目录
+
+2. Git方式，在Hexo根目录执行：
 ``` bash
-git clone git://github.com/LukasTomek/hexo-theme-snippet.git themes/hexo-theme-snippet
+git clone git://github.com/shenliyang/hexo-theme-snippet.git themes/hexo-theme-snippet
 ```
 
-### 3. Install theme plugin
+### 3. 安装主题插件
 
-Because **hexo-theme-snippet** uses the `ejs` template engine,` Less` CSS precompiled languag0e, and on the basis of official plugins.
-To carry out the development of the function, the following is necessary plug-ins:
+因为 **hexo-theme-snippet** 使用了 `ejs` 模版引擎 、 `Less` CSS预编译语言以及在官方插件的基础上
+进行功能的开发，以下为必装插件：
 
 ``` bash
 npm i hexo-renderer-ejs hexo-renderer-less hexo-deployer-git -S
 ```
 
-### 4. Deploy the theme
+### 4. 部署主题
 
-> If you have not changed the theme source file, you do not need code optimization to skip steps 1, 2, and 3.
+> 如果没有更改过主题源文件,也不需要代码优化可以跳过1,2,3步骤
 
 
-1. Gulp package build, copy the `package.json` file in the theme directory to the Hexo root directory, and then install the project development dependencies. [Gulp Getting Started Guide] (http://www.gulpjs.com.cn/docs/getting-started/)
+1. gulp打包构建，拷贝主题目录下`package.json`文件到Hexo根目录下，然后安装项目的开发依赖。  [Gulp入门指南](http://www.gulpjs.com.cn/docs/getting-started/)
 ``` bash
-npm i //installation project dependencies
+npm i   //安装项目依赖
 ```
 
-2. Create a file called gulpfile.js in the Hexo root directory:
+2. 在Hexo根目录下创建一个名为 gulpfile.js 的文件：
 ``` bash
-Require('./themes/hexo-theme-snippet/gulpfile');
+require('./themes/hexo-theme-snippet/gulpfile');
 ```
 
-3. Run gulp:
+3. 运行 gulp：
 ``` bash
-Gulp or gulp default // perform a package task
+gulp 或者 gulp default   //执行打包任务
 ```
 
-4. Empty the hexo static file and cache and regenerate
+4. 清空hexo静态文件和缓存，并重新生成
 ``` bash
-Hexo clean && hexo g //Clear the cache and generate a static file
+hexo clean && hexo g  //清空缓存并生成静态文件
 ```
 
-5. Local preview, there is no problem to publish again
+5. 本地预览，确没有问题再进行发布
 ``` bash
-hexo s -p 4000 or hexo s //start local service default
+hexo s -p 4000 或者 hexo s  //启动本地服务默认
 ```
 
-6. When gulp finishes executing and prompts `please execute: hexo d`, it can be published
+6. 当gulp执行完成，并提示  `please execute： hexo d` 时，可以进行发布
 ``` bash
-Hexo d or gulp deploy // deployment release
+hexo d 或者 gulp deploy  //部署发布
 ```
 
-### 5. Update the theme
+### 5. 更新主题
 
-Topics may be updated and updated from time to time, update the subject code:
+主题可能会不定时优化和更新，更新主题代码：
 
 ``` bash
 cd themes/hexo-theme-snippet
 git pull
 ```
 
-# **Theme**
+# **主题篇**
 
-### 1. Theme configuration
+### 1. 主题配置
 
 ``` yaml
 
-# layout - layout related
-# language: en default language
-
-## menu - navigation menu display {[@page: name, @ url: address, @ icon: icon]}
+## menu -- 导航菜单显示{[@page:名字,@url:地址,@icon:图标]}
 menu:
-- page: home
-  url: /
-  icon: fa-home
+  - page: home
+    url: /
+    icon: fa-home
 
-## favicon - site icon location {@favicon}
+## favicon -- 网站图标位置{@favicon}
 favicon: /favicon.ico
 
-## rss --rss file location {@rss}
+## rss --rss文件位置{@rss}
 rss: /atom.xml
 
 
-# Set the gadgets
+# 各个小工具的设置
 
-## widgets - 6 left widgets {@widgets: [notification, category, archive, tagcloud, friends]}
+## widgets -- 6个左边小工具{@widgets:[notification,category,archive,tagcloud,friends]}
 widgets:
   - search
   - notification
@@ -149,12 +149,12 @@ widgets:
   - tagcloud
   - friends
 
-# Set the gadgets
+# 各个小工具的设置
 
-## Hledání
+## 搜索
 jsonContent:
-  searchLocal: true // Enable local search
-  searchGoogle: true // Enable Google search
+  searchLocal: true // 是否启用本地搜索
+  searchGoogle: true //是否启用谷歌搜索
   posts:
     title: true
     text: true
@@ -162,107 +162,107 @@ jsonContent:
     categories: false
     tags: false
 
-## notification config - website announcement settings, support html and plain text
+## notification config --网站公告设置,支持 html 和 纯文本
 notification: |-
-            <p>The theme is online! Welcome to download or update ~ <br/>
-            Theme download: <a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet theme</a> <br/>
-            <hr/>Acceptance of contributions, including not limited to submission of questions and requirements, repair code. Welcome to Pull Request.<br/> Support topic: <a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一about</a></p>
+            <p>主题已经上线！欢迎下载或更新~ <br/>
+            主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+            <hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a></p>
 
-## social settings {@name: social tool name, @ icon: social tool icon, @ href: set tool link} [reference icon] (http://fontawesome.io/icons/)
+## 社交设置{@name:社交工具名字，@icon:社交工具图标，@href:设置工具链接} [参考图标](http://fontawesome.io/icons/)
 social:
- - name: Github
-   icon: git
-   href: //github.com/shenliyang
+  - name: Github
+    icon: git
+    href: //github.com/shenliyang
 
-## Article classification settings {@cate_config:{@show_count: Whether to display numbers, @ show_current: whether to highlight the current category}}
+## 文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
 cate_config:
    show_count: true
    show_current: true
 
-## article archive settings {@arch_config: / * parameter reference: https: //hexo.io/zh-cn/docs/helpers.html#list-archives*/}
-## Recommended combination: [{type: 'monthly',format: 'YYYY/MM'}, {type: 'yearly',format: 'YYYY'}]
+## 文章归档设置{@arch_config:/*参数参考：https://hexo.io/zh-cn/docs/helpers.html#list-archives*/}
+## 推荐组合方式：[{type: 'monthly',format: 'YYYY年MM月'},{type: 'yearly',format: 'YYYY年'}]
 arch_config:
    type: 'monthly'
-   format: 'YYYY/MM'
+   format: 'YYYY年MM月'
    show_count: true
    order: -1
 
-## Tag Cloud Settings{/*Parameter Reference: http://www.goat1000.com/tagcanvas-options.php */}
+## 标签云设置{/*参数参考：http://www.goat1000.com/tagcanvas-options.php */}
 tagcloud:
-  tag3d: false //  Whether to enable 3D tag cloud
-  textColour: '#444' // font color
-  outlineMethod: 'block' //  selected mode (outline|classic|block|colour|size|none)
-  outlineColour: '#FFDAB9' // The color of the selected mode
-  interval: 30 // The time interval between animation frames, the larger the value, the greater the rotation
-  freezeActive: true // Whether the selected label continues to scroll
-  frontSelect: true // Do not select the label at the back of the tag cloud
-  reverse: true // Whether to trigger in the reverse
-  wheelZoom: false // Whether to enable the mouse wheel
+  tag3d: false // 是否启用3D标签云
+  textColour: '#444' // 字体颜色
+  outlineMethod: 'block' // 选中模式(outline|classic|block|colour|size|none)
+  outlineColour: '#FFDAB9' // 选中模式的颜色
+  interval: 30 // 动画帧之间的时间间隔，值越大，转动幅度越大
+  freezeActive: true // 选中的标签是否继续滚动
+  frontSelect: true // 不选标签云后部的标签
+  reverse: true // 是否反向触发
+  wheelZoom: false // 是否启用鼠标滚轮
 
-## Friends Chain Settings{@Link Name: Link Address{@links:[,,,]}}
+## 友链设置{@链接名称：链接地址{@links:[,,,]}}
 links:
-  - Hexo official website: https://hexo.io/zh-cn/
+  - Hexo官网: https://hexo.io/zh-cn/
 
 
-# Theme customization personalized configuration
+# 主题自定义个性化配置
 
-## website slogan {@branding: website slogan (do not set to show the local picture)}
-branding: Never so simple and funny
+## 网站宣传语{@branding：网站宣传语(不设置显示本地图片)}
+branding: 从未如此简单有趣
 
-## Set banner background image {@img: custom image address (support absolute and relative path), theme default {"static background": "banner.jpg"}, {"dynamic background": "banner2.jpg"}, {"Dynamic Starry Sky Background": "banner3.jpg"}}
-## For example: http://snippet.shenliyang.com/img/banner|2|3.jpg, or './img/banner-img.jpg' (relative to local resource address)
+## 设置banner背景图片{@img:自定义图片地址(支持绝对和相对路径),主题默认{"静态背景":"banner.jpg"},{"动态背景":"banner2.jpg"},{"动态星空背景":"banner3.jpg"}}
+## 例如：http://snippet.shenliyang.com/img/banner|2|3.jpg, 或者 './img/banner-img.jpg'(相对本地资源地址)
 banner:
   img: http://snippet.shenliyang.com/img/banner.jpg
 
 
-## Set carousel{@img: image address, @url: click on the jump link (default: "javascript:")}
+## 设置carousel{@img:图片地址,@url:点击跳转链接(默认值:"javascript:")}
 carousel:
   img: 'img/head-img.jpg'
   url: 'javascript:'
 
-## Home list bottom panel {@homePanel: Whether to open}
+## 首页列表底部面板{@homePanel: 是否开启}
 homePanel: true
 
-## Home Article List Thumbnail
-### Loading Rules: Custom Article Thumbnails ('img' field added in Front-matter) > Pictures in the article > defaultImgs (randomly available) > No picture mode list
+## 首页文章列表缩略图
+### 加载规则: 自定义文章缩略图(在Front-matter中添加的'img'字段) > 文章内的图片 > defaultImgs(随机获取) > 无图模式列表
 
-## Customize random images
+## 自定义随机图片
 defaultImgs:
-  - http://www.example.jpg // Remote picture link example
-  - /img/default-1.jpg // Example of local image link
+  - http://www.example.jpg //远程图片链接示例
+  - /img/default-1.jpg //本地图片链接示例
 
-  ### Article Summary{@Abstract Display Priority: Custom Summary > Automatic Intercept Summary }
-  ### Custom summary range {@<!--more-->: Intercept the content before more as a summary}
-  ### Automatic Intercept Summary{@excerptLength: How many words before the article are automatically intercepted, no default: 120 words}
+### 文章摘要{@摘要显示优先级：自定义摘要 > 自动截取摘要 }
+### 自定义摘要范围{@<!--more-->:截取more之前的内容为摘要}
+### 自动截取摘要{@excerptLength:自动截取文章前多少个字为摘要，不配置默认：120字}
 excerptLength: 120
 
-## Do you want to open the article directory?
+## 是否开启文章目录
 toc: true
 
-## Code Highlighting Configuration{@highlightTheme: Subject Name, (Configuration is temporarily unavailable, follow-up development...)}
+## 代码高亮配置{@highlightTheme: 主题名称,(配置暂时不可用，后续开发中…)}
 
 highlightTheme: default //TODO
 
-## Article expiration reminder function {@warning:{days: Critical days (default 300 days, set 0 off function), text: reminder text / *%d is the total number of days placeholders */}}
+## 文章过期提醒功能 {@warning:{days:临界天数(默认300天,设置0关闭功能),text:提醒文字/*%d为过期总天数占位符*/}}
 warning:
   days: 300
-  text: 'This article was published before %d days, and the content in the article may be outdated.'
+  text: '本文于%d天之前发表，文中内容可能已经过时。'
 
-## Article declaration {@declaration: {enable: whether to open, title: statement title, tip: prompt content}}
+## 文章内声明{@declaration: {enable:是否开启,title:声明标题,tip:提示内容}}
 declaration:
   enable: true
-  title: 'Reprint statement'
+  title: '转载声明'
   tip: |-
-      For commercial reprint, please contact the author for authorization. For non-commercial reprint, please indicate the source. © <a href="" target="_blank">Snippet</a>
+      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
 
-##Article reward {@reward: {alipay: Alipay reward, wepay: WeChat reward, tip: reward tips; links are empty, turn off the reward function}}
+## 文章打赏{@reward: {alipay:支付宝打赏,wepay:微信打赏,tip:打赏提示语; 链接都为空,关闭打赏功能}}
 reward:
   alipay: ''
   wepay: '../img/reward-wepay.jpg'
-  tip: Appreciation is not a rogue encouragement
+  tip: 赞赏是不耍流氓的鼓励
 
 
-## Subject review
+## 主题评论
 
 ### gitment
 gitment:
@@ -275,264 +275,265 @@ gitment:
   perPage:
   maxCommentHeight:
 
-### Will force (default option)
+### 来必力(默认选项)
 livere:
   enable: true
   livere_uid:
 
-### Friends comments (service is unstable, often unable to load)
+### 友言评论(服务不稳定，经常无法加载)
 uyan:
   enable: false
   uyan_id:
 
-### Disqus reviews (need to overturn the wall or build an agent)
+### Disqus评论(需要翻墙，或者搭建代理)
 disqus:
   enable: false
   shortname: snippet
   count: false
 
-### Easy comment (requires ICP record)
+### 畅言评论(需要ICP备案)
 changyan:
   enable: false
   appid:
   conf:
 
-### Valine Review Reference Website: [valine Comments] (https://valine.js.org/)
+### Valine评论 参考网站: [valine评论](https://valine.js.org/)
 valine:
   enable: true
   appId:
   appKey:
-  placeholder: say something
-  notify: false // E-mail notification
-  verify: false // Verification code
-  avatar: mm // avatar
-  meta: nick,mail // Input box content, optional value nick, mail, link
+  placeholder: 说点什么吧
+  notify: false // 邮件通知
+  verify: false // 验证码
+  avatar: mm // avatar头像
+  meta: nick,mail // 输入框内容，可选值nick,mail,link
   pageSize: 10
 
-## Gitalk Review Reference Site: [A comment plugin based on Github Issue and Preact] (https://gitalk.github.io/)
+## Gitalk评论 参考网站: [一个基于Github Issue和Preact开发的评论插件](https://gitalk.github.io/)
 gitalk:
    enable: false
-   clientID: "" // Github app ID
-   clientSecret: "" // Github application key
-   Repo: shenliyang.github.io // Github warehouse address
-   Owner: shenliyang // Github username (Github repository owner)
-   Admin: shenliyang // The owner and collaborator of the GitHub repository (users with write access to this repository) can have one or more, if more than one can be used, for example: admin: admin1, admin2 configuration
-   perPage: 10 //The size of the data loaded each time, up to 100
-   distractionFreeMode: true // Whether to enable interference-free mode, similar to the full-screen mask effect of the Facebook comment box
+   clientID: "" // Github 应用ID
+   clientSecret: "" // Github 应用密钥
+   repo: shenliyang.github.io // Github仓库地址
+   owner: shenliyang  // Github 用户名(Github仓库拥有者)
+   admin: shenliyang // GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)可以有一个或多个，如果有多名可使用，例如：admin: admin1,admin2 配置
+   perPage: 10 // 每次加载的数据大小，最多100
+   distractionFreeMode: true // 是否启用无干扰模式，类似Facebook评论框的全屏遮罩效果
 
-   // The following parameter topics will be processed by default, no configuration required
-   Language // language type, default is the option in the site configuration
-   Id // The unique identifier of the page, which has been used to generate a unique id for pathname conversion using md5
+   // 以下参数主题会默认处理，不需要配置
+   language // 语言类型，默认为站点配置中选项
+   id // 页面的唯一标识, 已使用md5对pathname转换生成唯一id处理
 
-## Website Visitor Statistics [No garlic statistics] (http://busuanzi.ibruce.info/)
+## 网站访客统计 [不蒜子统计](http://busuanzi.ibruce.info/)
 visit_counter:
-    site: true // total visits and visitor statistics
-    page: true // article reading statistics
+   site: true // 总访问量和访问人数统计
+   page: true // 文章阅读量统计
 
-## Website Access Statistics
+## 网站访问统计
 
-### Net Meng CNZZ statistics Reference Website: [Network alliance CNZZ](http://www.umeng.com/)
-Cnzz_anaylytics:
+### 网盟CNZZ统计 参考网站: [网盟CNZZ](http://www.umeng.com/)
+cnzz_anaylytics:
 
-### Baidu Statistics Reference Website: [Baidu Statistics] (https://tongji.baidu.com/)
+### 百度统计 参考网站: [百度统计](https://tongji.baidu.com/)
 baidu_anaylytics:
 
-### Google Statistics Reference Website: [Google Statistics] (https://www.google-analytics.com/)
+### 谷歌统计 参考网站：[谷歌统计](https://www.google-analytics.com/)
 google_anaylytics:
 
-### Tencent Analysis Reference Website: [Tencent Analysis] (http://ta.qq.com/)
+### 腾讯分析 参考网站：[腾讯分析](http://ta.qq.com/)
 tencent_analytics:
 
-### Baidu Site Certification
+### 百度站点认证
 baidu-site-verification:
 
-### Baidu Auto Push (@baidu_push: Whether to enable Baidu Auto Push) Reference Website: [Baidu Webmaster Resources] (https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18)
-Baidu_push:
+### 百度自动推送(@baidu_push: 是否启用百度自动推送)  参考网站: [百度站长资源](https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18)
+baidu_push:
 
-## ICON Configuration (If you don't match, enable Local Font Icon)
+## ICON配置 (不配则启用本地Font Icon)
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
-## Website theme configuration
-since: 2017 //Building time
-robot: 'all' //Controls the crawling and indexing behavior of the search engine. The default is all
-version: 1.2.1 //current theme version number
+## 网站主题配置
+since: 2017  //建站时间
+robot: 'all'  //控制搜索引擎的抓取和索引编制行为，默认为all
+version: 1.2.1  //当前主题版本号
 ```
 
-### Theme usage tips and function extensions
-1. Modify the new article Front-matter template and modify the `post.md` template in the `scaffolds` directory.
-> Do not keep the comment part inside the template file. Please use the English colon after the keyword.
+### 主题使用技巧及功能扩展
+1. 修改新增文章Front-matter模板,修改`scaffolds`目录下的`post.md`模板
+> 模板文件内部不要保留注释部分,关键词后面请使用英文冒号
 ``` yml
   ---
-  title: {{ title }} // title
-  date: {{ date }}   // time
-  categories: ['Class 1', 'Class 2'] // Category
-  tags: ['tag 1', 'tag 2']           // tag
-  comments: false    // Whether to open comments
-  img:               // custom thumbnail
-   ---
+  title: {{ title }} // 标题
+  date: {{ date }}   // 时间
+  categories: ['分类1','分类2'] // 分类
+  tags: ['标签1','标签2']       // 标签
+  comments: false    // 是否开启评论
+  img:               // 自定义缩略图
+  ---
 ```
 
-2. Enable in-site local search
+2. 启用站内本地搜索功能
 
-If you want to use local site search, you must install the plugin hexo-generator-json-content to create a local search json file.
+如果要使用本地站点搜索，必须安装插件hexo-generator-json-content来创建本地搜索json文件
 ```bash
 npm i hexo-generator-json-content@2.2.0 -S
 ```
-Then modify the theme configuration _config.yml file under the `jsonContent` related parameters.
+然后修改主题配置_config.yml文件下`jsonContent`相关参数。
 
-# **Upgrade article**
+# **提升篇**
 
-## 1. Introduction to Travis CI
-CI is a continuous integration system. For the individual, just let your code be submitted to the remote (here GitHub), compile automatically, automate testing, auto-deploy, and more.
+## 1. Travis CI 介绍
+CI即持续集成系统。对个人而言，就是让你的代码在提交到远程(这里是GitHub)，立即自动编译，自动化测试、自动部署等。
 
-You don't need to worry about changing your computer. If you can push the article remotely, you can leave it to Travis CI for processing.
+不需要在担心更换电脑时，还要从新部署环境的问题，只要你能向远程推送文章，其他的事情就都可以交给Travis CI处理就ok了。
 
-## 2. Travis CI use
+## 2. Travis CI 使用
 
-> The default premise is that you have been authorized to log in to the Travis website via Github and associated the repository and related configuration on GitHub.
-1. Copy the `gulpfile.js` `travis.yml` `travis.sh` under the theme to the project root directory.
+> 默认前提是已经通过Github进行授权登录Travis网站，并关联了GitHub上的仓库和相关配置。
+1. 拷贝主题下的`gulpfile.js` `travis.yml` `travis.sh` 到项目根目录
 
-2. Configure the travis.yml file
+2. 配置travis.yml 文件
 ``` yml
-language: node_js #Use the Node locale
-node_js: stable #Install stable version of Node
+language: node_js #使用Node语言环境
+node_js: stable #安装稳定版Node
 
 sudo: false
 
-#cache Enable caching to speed up builds
+#cache 启用缓存，加快构建速度
 cache:
   directories:
     - "node_modules"
 
-notifications: #Enable notifications
+notifications: #启用通知
   email:
     recipients:
-      - snippet@91h5.cc # Receive messages for build messages No need to be set to false
-    on_success: never # When the deployment is successful, you can set the airline never change
-    on_failure: always # When the deployment fails, the same as above
+      - snippet@91h5.cc #接收构建消息的邮件 不需要可设置为false
+    on_success: never #部署成功时，可设置alway never change
+    on_failure: always #部署失败时，同上
 
 # S: Build Lifecycle
 
 before_install:
-  - sudo apt-get install libnotify-bin #Support linux desktop reminder library
+  - sudo apt-get install libnotify-bin #支持linux桌面提醒库
 
 install:
-  - npm install #install dependency
+  - npm install  #安装依赖
 
 before_script:
-  - export TZ='Asia/Shanghai' #Set time zone
-  - npm install -g gulp #Global Install Gulp
-  - chmod +x _travis.sh #authorize script execution permissions
+  - export TZ='Asia/Shanghai' #设置时区
+  - npm install -g gulp  #全局安装Gulp
+  - chmod +x _travis.sh  #授权脚本执行权限
 
 script:
-  - hexo clean && hexo g #clear the cache and generate static files
-  - gulp #execute gulp task
+  - hexo clean && hexo g #清除缓存并生成静态文件
+  - gulp #执行gulp任务
 
-after_success: # When the execution is successful (use of extended functions later)
+after_success: #执行成功时(以后扩展功能使用)
 
 after_script:
-  - ./_travis.sh #Execute the deployment script
+  - ./_travis.sh #执行部署脚本
 # E: Build LifeCycle
 
 branches:
   only:
-    - dev # needs to listen to the deployed branch
+    - dev #需要监听部署的分支
 env:
   global:
-   - GH_REF: github.com/shenliyang/shenliyang.github.io.git #change to your own git address
+   - GH_REF: github.com/shenliyang/shenliyang.github.io.git #更改为自己git地址
 ```
 
-3. Submit the code to Github for automated deployment
-4. When the `.travis.yml` configuration file is modified, submit it to the hexo branch of the remote repository. If the previous configuration is all ok, we should be able to see the automatic in the Travis CI blog project home page. The build is already in progress. The above will show the log information and status during the build process.
+3. 提交代码到Github，实现自动部署
+4. 当 `.travis.yml `配置文件修改完成后，将其提交到远程仓库的 hexo 分支下，此时如果之前的配置一切ok，我们应该能在 Travis CI 的博客项目主页页面中看到自动构建已经在开始执行了。上面会显示出构建过程中的日志信息及状态等。
 
-## 3. Theme development
-Gulp performs the enabled theme development mode
+## 3. 主题开发
+Gulp 执行启用主题开发模式
 ``` bash
 gulp dev
 ```
-Will listen for changes in styleless or JS files. Then execute the [Subject Release] above.
+会监听样式less或者JS文件的变动。然后执行上面的【主题发布】即可。
 
-### Run preview
+### 运行预览
 ``` bash
 hexo clean && hexo g && hexo s -p 4000
 ```
 
-Listen to port 4000 and use the browser to open the address `http://localhost:4000` for preview.
+监听4000端口，使用浏览器打开地址`http://localhost:4000`进行预览。
 
-# **Other**
+# **其他**
 
-## Thank you
-Thanks to the design and creativity of many themes and blogs when designing this theme!
+## 感谢
+在设计这款主题的时候参考了好多主题和博客的设计和创意，深表感谢！
 
-## Encourage
-**If you feel that this topic is not bad, your support and encouragement is the biggest motivation for subsequent updates, == Welcome [Star] (https://github.com/shenliyang/hexo-theme-snippet/stargazers) == **
+## 鼓励
+**如果觉得本主题还不错，您的支持和鼓励才是后续更新最大的动力，== 欢迎  [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers)下 ==**
 
 ![Stargazers over time](https://starchart.cc/shenliyang/hexo-theme-snippet.svg)
 
-## Purpose
-Theme: ** Dedicated to the theme of simple and lightweight, easy to use out of the box **, the theme of the project will continue to maintain and update, will not run, please feel free to use.
+## 宗旨
+主题宗旨：**致力主题简洁轻量，配置方便开箱即用**，该主题项目会持续维护和更新，不会跑路，请放心使用。
 
-## Contribution
-Accept various forms of contributions, including but not limited to submitting questions or requirements, fixing the code.
-Welcome to mention either Issue or Pull Request.
+## 贡献
+接受各种形式的贡献，包括但不限于提交问题或需求，修复代码。
+欢迎大家提Issue或者Pull Request。
 
-> The Hexo framework is fast, simple and efficient. Like beautiful, add a variety of features, toss friends, it is recommended to move to: [wordpress official website] (https://cn.wordpress.org/)
-
-
-## You don’t know the tips of Issues
-> It is highly recommended to read ["Wise of Questioning"] (https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way), [How to Ask the Open Source Community] (https: //github.com/seajs/seajs/issues/545) and [How to Report Bug Effectively] (http://www.chiark.greenend.org.uk/%7Esgtatham/bugs-cn.html), [ "How to submit unanswerable questions to open source projects" (https://zhuanlan.zhihu.com/p/25795393), better questions are easier to get help.
-
-<b>* Read the above article and know that you can </b> [Issues] (https://github.com/shenliyang/hexo-theme-snippet/issues/new).
+> Hexo框架追求的是快速、简洁，高效。喜欢绚丽，添加各种功能，折腾的朋友，建议移步至：[wordpress官网](https://cn.wordpress.org/)
 
 
-## common problem
+## 你不知道的提Issues技巧
+> 强烈推荐阅读 [《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)、[《如何向开源社区提问题》](https://github.com/seajs/seajs/issues/545) 和 [《如何有效地报告 Bug》](http://www.chiark.greenend.org.uk/%7Esgtatham/bugs-cn.html)、[《如何向开源项目提交无法解答的问题》](https://zhuanlan.zhihu.com/p/25795393)，更好的问题更容易获得帮助。
 
-#### 1. The search function cannot be used. The content.json file could not be found?
+<b>* 已阅读以上文章，并知晓，可以 </b> [提Issues](https://github.com/shenliyang/hexo-theme-snippet/issues/new) 了。
 
-Need to install the hexo-generator-json-content plugin:
+
+## 常见问题
+
+#### 1. 搜索功能不能用，content.json文件找不到？
+
+需要安装hexo-generator-json-content插件：
 
 ``` bash
 npm i hexo-generator-json-content@2.2.0 -S
 ```
 
-#### 2. Google search is not responding?
+#### 2. 谷歌搜索没有响应？
 
-If you are not responding with Google search, determine if you have been online
+如果使用谷歌搜索没有响应，确定是否已经科学上网
 
-#### 3. How to set the home page thumbnail to automatically retrieve the image inside the article?
+#### 3. 怎么设置首页文章缩略图自动检索文章内图片？
 
-Home Article Thumbnail Loading Rules: Custom Article Thumbnails > Automatically Retrieve Images in Articles > defaultImgs (Random Access) > No Graph Mode List
+首页文章缩略图加载规则: 自定义文章缩略图 > 自动检索文章内的图片 > defaultImgs(随机获取) > 无图模式列表
 
-In `Front-matter`:
-Specify img variable -> for fixed thumbnail
-Do not specify the img variable -> automatically retrieve the image in the article
+在`Front-matter`中：
+指定img变量 -> 为固定缩略图
+不指定img变量 -> 自动检索文章内的图片
 
 
-#### 4. Where can I access local static files in the url?
+#### 4. 在url哪里可以访问到本地静态文件吗？
 
-Create a new folder in the theme `source` directory, for example: `static` folder, then add static resources, for example: xxx.pdf file, access: *`http://yoursite.com/static/xxx.pdf`*
+在主题 `source` 目录下新建文件夹，例如: `static`文件夹，然后添加静态资源，例如: xxx.pdf文件， 访问：*`http://yoursite.com/static/xxx.pdf`*
 
-#### 5. Does this theme have paging function?
+#### 5. 这个主题有分页功能吗？
 
-The theme has integrated pagination and is modified in the Hexo configuration
+主题已经集成分页功能，在Hexo配置中修改
 
-| Parameter | Description | Default |
+| 参数       | 描述        | 默认值  |
 | ------------- |:-------------:| :-----:|
-| per_page | The number of articles displayed per page (0 = Close paging feature) | 10 |
-| pagination_dir | Pagination | page |
+| per_page     | 每页显示的文章量 (0 = 关闭分页功能) |  10 |
+| pagination_dir     | 分页目录      |   page |
 
-#### 6. Why are the right gadget titles in English?
+#### 6. 为什么右侧小工具标题都为英文呢？
 
-Maybe you forgot to preset the website language and enable the default language. Please adjust the language setting in the Hexo configuration first.
+可能是您忘记预设网站语言，而启用默认语言了，请先在Hexo配置中调整 language 设定
+
 ``` bash
 language: zh-CN
 ```
 
-#### 7. Disagreement about Hexo labeling and classification methods
+#### 7. 关于Hexo标签和分类方法的分歧
 
-> Only articles support categories and labels, which you can set in Front-matter. In other systems, classifications and labels sound similar, but there are significant differences between the two in Hexo: classifications are sequential and hierarchical, meaning that `Foo, Bar` is not equal to `Bar, Foo`; There is no order and hierarchy.
+> 只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说  `Foo, Bar` 不等于 `Bar, Foo`；而标签没有顺序和层次。
 
-If you have experience with WordPress, it's easy to misunderstand Hexo's classification. WordPress supports setting up multiple categories for an article, and these categories can be siblings or parent-child categories. However, Hexo does not support specifying multiple sibling classifications. The following method is specified:
+如果您有过使用WordPress的经验，就很容易误解Hexo的分类方式。WordPress支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是Hexo不支持指定多个同级分类。下面的指定方法：
 
 ``` bash
 categories:
@@ -540,21 +541,21 @@ categories:
 - Life
 ```
 
-It will make the classified life a sub-category of Diary, not a side-by-side classification. Therefore, it is necessary to choose the most accurate classification possible for your article.
+会使分类Life成为Diary的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。
 
-Hexo official document: [differences in classification methods] (https://hexo.io/zh-cn/docs/front-matter# classification and labeling)
+Hexo官方文档: [分类方法的分歧](https://hexo.io/zh-cn/docs/front-matter#分类和标签)
 
-> Didn't find the solution to the problem you need, it is recommended to read ["Issues Tips You Don't Know"] (https://github.com/shenliyang/hexo-theme-snippet#I don't know the Issues tips) Issues.
+> 没有找到你需要的问题解决方案，建议阅读[《你不知道的提Issues技巧》](https://github.com/shenliyang/hexo-theme-snippet#你不知道的提Issues技巧) 再提Issues。
 
 
-## Version update log
+## 版本更新日志
 
-  - Increase the Gitalk comment system
-  - Increase the results of blog automation deployment to the mobile phone in real time, and understand the deployment situation in the first time.
+  - 增加Gitalk评论系统
+  - 增加博客自动化部署结果实时推送到手机钉钉上，第一时间了解部署情况
 
-  Example of automated deployment result notification:
+  自动化部署结果通知示例：
 
-  [Automatic Deployment Result Notification Example] (https://s2.ax1x.com/2019/03/06/kvnejs.jpg)
+  ![自动化部署结果通知示例](https://s2.ax1x.com/2019/03/06/kvnejs.jpg)
 
 ## License
 
