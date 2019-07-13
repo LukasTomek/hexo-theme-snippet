@@ -6,21 +6,21 @@
     <%- js('assets/tagcanvas.min.js?rev=2.9') %>
     <script>
         var tagOption = {
-            textColour: '<%= theme.tagcloud.textColour %>', // 字体颜色
-            outlineMethod: '<%= theme.tagcloud.outlineMethod %>', // 选中模式
-            outlineColour: '<%= theme.tagcloud.outlineColour %>', // 选中模式的颜色
-            interval: <%= theme.tagcloud.interval %> || 30, // 动画帧之间的时间间隔，值越大，转动幅度越大
+            textColour: '<%= theme.tagcloud.textColour %>', // font color
+            outlineMethod: '<%= theme.tagcloud.outlineMethod %>', // Selected mode
+            outlineColour: '<%= theme.tagcloud.outlineColour %>', // The color of the selected mode
+            interval: <%= theme.tagcloud.interval %> || 30, // The time interval between animation frames, the larger the value, the greater the rotation
             textHeight: 13,
             outlineRadius: 3,
-            freezeActive: <%= theme.tagcloud.freezeActive %> || '', // 选中的标签是否继续滚动
-            frontSelect: <%= theme.tagcloud.frontSelect %> || '', // 不选标签云后部的标签
+            freezeActive: <%= theme.tagcloud.freezeActive %> || '', // Whether the selected label continues to scroll
+            frontSelect: <%= theme.tagcloud.frontSelect %> || '', // Do not select the label at the back of the tag cloud
             initial: [0.1, -0.1],
             depth: 0.5,
             decel: 0.95,
             maxSpeed: 0.03,
-            reverse: <%= theme.tagcloud.reverse %> || '', // 是否反向触发
-            fadeIn: 500, // 进入动画时间
-            wheelZoom: <%= theme.tagcloud.wheelZoom %> || '' // 是否启用鼠标滚轮
+            reverse: <%= theme.tagcloud.reverse %> || '', // Whether to trigger in the reverse
+            fadeIn: 500, // Enter animation time
+            wheelZoom: <%= theme.tagcloud.wheelZoom %> || '' // Whether to enable the mouse wheel
         }
         TagCanvas.Start('tag-cloud-3d','',tagOption);
     </script>
