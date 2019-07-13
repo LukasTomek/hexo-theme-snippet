@@ -1,5 +1,6 @@
 # hexo-theme-snippet
 [English Version](https://github.com/LukasTomek/hexo-theme-snippet/blob/master/README_EN.md)
+
 Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 
 如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下

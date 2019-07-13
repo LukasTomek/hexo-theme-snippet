@@ -543,9 +543,9 @@ categories:
 
 It will make the classified life a sub-category of Diary, not a side-by-side classification. Therefore, it is necessary to choose the most accurate classification possible for your article.
 
-Hexo official document: [differences in classification methods](https://hexo.io/docs/front-matter.html# classification and labeling)
+Hexo official document: [differences in classification methods](https://hexo.io/docs/front-matter.html#Categories-amp-Tags)
 
-> Didn't find the solution to the problem you need, it is recommended to read ["Issues Tips You Don't Know"](https://github.com/shenliyang/hexo-theme-snippet#I don't know the Issues tips) Issues.
+> Didn't find the solution to the problem you need, it is recommended to read ["Issues Tips You Don't Know"](https://github.com/LukasTomek/hexo-theme-snippet/blob/master/README_EN.md#you-dont-know-the-tips-of-issues) Issues.
 
 
 ## Version update log
@@ -555,7 +555,7 @@ Hexo official document: [differences in classification methods](https://hexo.io/
 
   Example of automated deployment result notification:
 
-  [Automatic Deployment Result Notification Example](https://s2.ax1x.com/2019/03/06/kvnejs.jpg)
+  ![Automatic Deployment Result Notification Example](https://s2.ax1x.com/2019/03/06/kvnejs.jpg)
 
 ## License
 
