@@ -20,7 +20,7 @@
                           <li>
                         <% } %>
                             <h3>
-                              <%= post.date.format('DD') %><span><%= post.date.format('MM') %>month</span>
+                              <%= post.date.format('DD') %><span><%= post.date.format('MM') %></span>
                             </h3>
                             <a href="<%- url_for(post.path) %>" title="<%- post.title %>" target="_blank"><%- post.title %></a>
                         </li>

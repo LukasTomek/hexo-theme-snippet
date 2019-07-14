@@ -65,7 +65,7 @@ git clone git://github.com/LukasTomek/hexo-theme-snippet.git themes/hexo-theme-s
 
 ### 3. Install theme plugin
 
-Because **hexo-theme-snippet** uses the `ejs` template engine,` Less` CSS precompiled languag0e, and on the basis of official plugins.
+Because **hexo-theme-snippet** uses the `ejs` template engine,` Less` CSS pre-compiled language, and on the basis of official plug-ins.
 To carry out the development of the function, the following is necessary plug-ins:
 
 ``` bash
@@ -543,7 +543,7 @@ categories:
 
 It will make the classified life a sub-category of Diary, not a side-by-side classification. Therefore, it is necessary to choose the most accurate classification possible for your article.
 
-Hexo official document: [differences in classification methods](https://hexo.io/docs/front-matter.html#Categories-amp-Tags)
+Hexo official document: [Categories & Tags](https://hexo.io/docs/front-matter.html#Categories-amp-Tags)
 
 > Didn't find the solution to the problem you need, it is recommended to read ["Issues Tips You Don't Know"](https://github.com/LukasTomek/hexo-theme-snippet/blob/master/README_EN.md#you-dont-know-the-tips-of-issues) Issues.
 
