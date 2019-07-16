@@ -37,7 +37,7 @@ carousel:
 
 ## widgets
 widgets:
-##  - search
+  - search
 ##  - notification
 ##  - social
   - category
