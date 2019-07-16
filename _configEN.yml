@@ -1,5 +1,6 @@
 # ---------------------------------------------------------------
 #   Site Information And Theme Configuration Settings
+#   language: zh-CN
 # ---------------------------------------------------------------
 
 ## menu
@@ -29,13 +30,8 @@ rss: /atom.xml
 
 ## Carousel
 carousel:
-<<<<<<< HEAD
   img: ##'./img/head-img.jpg'
   url: ## 'https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=xs0pypd2'
-=======
-  img: './img/head-img.jpg'
-  url: 'https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=xs0pypd2'
->>>>>>> 0abc01739d8e56cb80990bb895a6a979f23d9ccf
 
 # Settings for each gadget
 
@@ -116,7 +112,8 @@ tagcloud:
 
 ## Friend chain setting
 links:
-  - Hexo official website: https://hexo.io/zh-cn/
+  - Hexo official website: https://hexo.io/
+
 
 # Theme custom personalized configuration
 
@@ -181,11 +178,7 @@ valine:
    meta: nick,mail
    pageSize: 10
 
-<<<<<<< HEAD
 ### Easy comment (requires ICP record)
-=======
-### 畅言评论(需要ICP备案)
->>>>>>> 0abc01739d8e56cb80990bb895a6a979f23d9ccf
 changyan:
   enable: false
   appid:
@@ -254,9 +247,5 @@ baidu_push: false
 
 # Website theme configuration
 since: 2017
-<<<<<<< HEAD
 robot: 'all' ### Control search engine crawling and indexing behavior, the default is all
-=======
-robot: 'all' ### 控制搜索引擎的抓取和索引编制行为，默认为all
->>>>>>> 0abc01739d8e56cb80990bb895a6a979f23d9ccf
 version: 1.2.3
