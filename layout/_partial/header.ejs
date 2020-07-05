@@ -1,13 +1,19 @@
-<header class="main-header" <% if(theme.banner.img){ %> style="background-image:url(<%= url_for(theme.banner.img) %>)" <%}%> >
+<header class="main-header" <% if(theme.banner.img){ %> style="background-image:url(
+    <%= url_for(theme.banner.img) %>)"
+    <%}%> >
     <div class="main-header-box">
-        <!-- <a class="header-avatar" href="/" title='<%= config.author %>'>
-            <%- image_tag('img/avatar.jpg',{alt:'Logo avatar',class:'img-responsive center-block'}) %>
-        </a> -->
-        <% if(theme.branding){ %>
-          <div class="branding">
-        	<!--<h2 class="text-hide">Snippet theme, never been so simple and fun</h2>-->
-            <h2> <%= theme.branding %> </h2>
-         </div>
-      <% } %>
+        <a class="header-avatar" href="/" title='<%= config.author %>'>
+            <%- image_tag('img/avatar.jpg',{alt:'logo avatar',class:'img-responsive center-block'}) %>
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet theme, never been so simple and fun</h2>-->
+            <% if(theme.branding){ %>
+            <h2>
+                <%= theme.branding %>
+            </h2>
+            <% } else { %>
+            <%- image_tag('img/branding.png',{alt:'Snippet blog theme',class:'img-responsive center-block'}) %>
+            <% } %>
+        </div>
     </div>
 </header>

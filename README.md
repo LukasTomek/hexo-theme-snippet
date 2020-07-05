@@ -6,7 +6,7 @@ Snippet 简洁而不简单，也许是一款你寻找已久hexo主题。
 如果本主题也是你喜欢的菜，请动动手指 [Star](https://github.com/shenliyang/hexo-theme-snippet/stargazers) 支持一下
 
 [![Build Status](https://www.travis-ci.org/shenliyang/hexo-theme-snippet.svg?branch=master)](https://www.travis-ci.org/shenliyang/hexo-theme-snippet)
-[![Read the Docs](https://img.shields.io/readthedocs/pip/stable.svg)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
+[![Read the Docs](https://img.shields.io/badge/docs-complete-brightgreen)](https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md)
 [![HitCount](http://hits.dwyl.io/shenliyang/hexo-theme-snippet.svg)](http://hits.dwyl.io/shenliyang/hexo-theme-snippet)
 [![mnt-image](https://img.shields.io/maintenance/yes/2019.svg)](../../commits/master)
 [![codebeat badge](https://codebeat.co/badges/6ef2dcd2-af90-40e0-9628-ac689441f774)](https://codebeat.co/projects/github-com-shenliyang-hexo-theme-snippet-master)
@@ -355,6 +355,7 @@ fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
 ## 网站主题配置
 since: 2017  //建站时间
+beian: '京ICP备04000001号' //网站备案号
 robot: 'all'  //控制搜索引擎的抓取和索引编制行为，默认为all
 version: 1.2.1  //当前主题版本号
 ```
@@ -545,6 +546,15 @@ categories:
 会使分类Life成为Diary的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。
 
 Hexo官方文档: [分类方法的分歧](https://hexo.io/zh-cn/docs/front-matter#分类和标签)
+
+#### 8. tags 以及categories 页面显示不正确，不能访问，显示404？
+
+当使用主题访问，域名+/tags  或 域名+ /categories 若访问404，是正常情况的。因为这些路径本不属于主题或者Hexo框架的一部分。而是由用户主动新建页面扩展而来。
+
+可以新建页面，比如：tags和categories，按以下命令格式：
+```bash 
+ hexo new page tags 和 hexo new page categories
+````
 
 > 没有找到你需要的问题解决方案，建议阅读[《你不知道的提Issues技巧》](https://github.com/shenliyang/hexo-theme-snippet#你不知道的提Issues技巧) 再提Issues。
 
